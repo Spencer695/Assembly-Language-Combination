@@ -39,8 +39,13 @@ int main() {
         return 0;
     }
 
+    // Calculate factorials
+    uint16_t n_factorial = factorial(n);
+    uint16_t k_factorial = factorial(k);
+    uint16_t n_minus_k_factorial = factorial(n - k);
+    
     // calculate C(n,k) = n! / (k! * (n-k)!)
-    uint16_t c_n_k = factorial(n);
+    uint16_t c_n_k = n_factorial / (k_factorial * n_minus_k_factorial);
 
     // write out results
     cout << "result = " << c_n_k << endl;
