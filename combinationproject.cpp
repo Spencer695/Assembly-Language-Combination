@@ -2,10 +2,8 @@
 #include <iostream>
 using namespace std;
 
-/*
- * *** STUDENTS SHOULD WRITE CODE FOR THIS FUNCTION ***
- */
-int16_t factorial(const uint16_t x) {
+// Calculates the factorial of a given number
+uint16_t factorial(const uint16_t x) {
     uint16_t result = 1;
     for (uint16_t i = 2; i <= x; i++) {
         result *= i;
@@ -13,17 +11,14 @@ int16_t factorial(const uint16_t x) {
     return result;
 }
 
-/*
- * *** STUDENTS SHOULD WRITE CODE FOR THIS FUNCTION ***
- */
 int main() {
     int n, k;
 
-    // get user input for n
+    // Gets user input for n
     cout << "Enter n: ";
     cin >> n;
 
-    // get user input for k
+    // Gets user input for k
     cout << "Enter k: ";
     cin >> k;
 
@@ -39,7 +34,7 @@ int main() {
         return 0;
     }
 
-    // Calculate factorials
+    // Calculates factorials
     uint16_t n_factorial = factorial(n);
     uint16_t k_factorial = factorial(k);
     uint16_t n_minus_k_factorial = factorial(n - k);
@@ -47,7 +42,7 @@ int main() {
     // calculate C(n,k) = n! / (k! * (n-k)!)
     uint16_t c_n_k = n_factorial / (k_factorial * n_minus_k_factorial);
 
-    // write out results
+    // Outputs results
     cout << "result = " << c_n_k << endl;
 
     return 0;
